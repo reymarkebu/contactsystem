@@ -23,7 +23,9 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $data['items'] = DB::table('contacts')->paginate(5);
+        $data['items'] = Auth::user()->contacts()->latest()->paginate(5);
+
+        // dd(count($data['items']));
         return view('contacts.index', compact('data'));
     }
 

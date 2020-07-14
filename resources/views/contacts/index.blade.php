@@ -47,6 +47,8 @@
                                 </td>
                                 </tr>
                                 @endforeach
+                                 <!-- modal -->
+                                @include('contacts.modals.delete')
                         
                         @else
                         <tr>
@@ -58,8 +60,7 @@
 
                 </table>
                 {{ $data['items']->links() }}
-                    <!-- modal -->
-                    @include('contacts.modals.delete')
+                   
                 </div>
             </div>
         </div>
