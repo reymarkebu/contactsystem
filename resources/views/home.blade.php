@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Welcome</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,18 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <form action="{{route('contacts') }}">
+
+
+                        <div class="text-center">
+                            Thank you for registering!
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-outline-dark my-3">Continue</button>
+                            </div>
+                        </div>
+
+                    </form>
+                    
                 </div>
             </div>
         </div>
